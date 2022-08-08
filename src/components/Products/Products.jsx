@@ -12,14 +12,14 @@ function Products(props) {
     },[])
 
     return (
-        <section>
+        <section className="products">
             {products.map(({id, images, name, description}) => (
-                <div key={id}>
-                    <img src={`${MEDIA_PATH}/${images[0]}`} alt={name}/>
-                    <div>
-                        <h2>{name}</h2>
-                        <p>{description}</p>
-                        <Link to={`products/${id}`}>Details</Link>
+                <div key={id} className="products__card card">
+                    <img src={`${MEDIA_PATH}/${images[0]}`} alt={name} className="card__image"/>
+                    <div className="card__box">
+                        <h2 className="card__hdl">{name}</h2>
+                        <p className="card__text">{description}</p>
+                        <Link to={`products/${id}`} className="card__link">Details</Link>
                     </div>
                 </div>
             ))}
