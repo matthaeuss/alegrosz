@@ -1,0 +1,56 @@
+.search {
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 20rem;
+  margin: auto;
+  position: relative;
+
+  &__input {
+    display: block;
+    color: rgb(33, 37, 41);
+    font-size: 1.25rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    min-height: calc(1.5em + 1rem + 2px);
+    box-sizing: border-box;
+    border: 1px solid rgb(206, 212, 218);
+    outline: none;
+
+    &::placeholder {
+
+    }
+
+    &__autocomplete {
+
+    }
+  }
+
+  .autocomplete {
+    position: absolute;
+    background: rgba(255, 255, 255, .9);
+    padding: 1rem;
+    width: calc(100% - 1rem);
+    border: 1px solid rgb(206, 212, 218);
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    border-radius: 0 0 0.25rem 0.25rem;
+    border-top: 0;
+    transition: all 200ms;
+
+    &__item {
+      line-height: 1.6;
+      cursor: pointer;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    &__highlight {
+      background: gold;
+    }
+  }
+
+
+}
