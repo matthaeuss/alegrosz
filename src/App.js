@@ -1,13 +1,14 @@
 import './App.scss';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Products from "./components/Products/Products";
+import Product from "./components/Product/Product";
 
 function App() {
   return (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Products/>}/>
-          <Route path="/products/:id" element={<h1>Product detail</h1>}/>
+          <Route path="/products/:id" element={<Product/>}/>
         </Routes>
       </BrowserRouter>
   );
