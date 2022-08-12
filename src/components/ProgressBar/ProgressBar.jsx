@@ -13,7 +13,7 @@ function ProgressBar({ weight }) {
     const interval = setTimeout(() => {
       const calculation = calculateProgress();
 
-      console.log(calculation);
+      // console.log(calculation);
 
       if (calculation <= 100) {
         setAccomplished(calculateProgress());
