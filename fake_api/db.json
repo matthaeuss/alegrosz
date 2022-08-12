@@ -9,7 +9,7 @@
       "price": 2800,
       "currency": "PLN",
       "stock": 5,
-      "images": ["ryzen.jpeg"],
+      "images": ["ryzen.jpeg", "ryzen2.jpeg", "ryzen3.jpeg", "ryzen4.jpeg"],
       "opinions": [1, 3],
       "comments": [1, 2, 3]
     },
@@ -61,7 +61,7 @@
       "price": 2800,
       "currency": "PLN",
       "stock": 5,
-      "images": ["windows.jpeg"],
+      "images": ["ryzen.jpeg"],
       "opinions": [1, 3],
       "comments": [1, 2, 3]
     },
@@ -74,7 +74,7 @@
       "price": 2800,
       "currency": "PLN",
       "stock": 5,
-      "images": ["windows.jpeg"],
+      "images": ["ryzen.jpeg"],
       "opinions": [1, 3],
       "comments": [1, 2, 3]
     }],
