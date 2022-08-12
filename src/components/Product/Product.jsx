@@ -5,6 +5,7 @@ import { MEDIA_PATH } from "../../constants";
 import "./Product.scss";
 import { getAllProductData } from "../../helpers/api";
 import Loader from "../Loader/Loader";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 function Product() {
   const { id } = useParams();
@@ -18,6 +19,7 @@ function Product() {
     <>
       {Object.keys(product).length !== 0 ? (
         <>
+          <ProgressBar weight={500} />
           <div className="product">
             <main className="container">
               <section className="slider">
