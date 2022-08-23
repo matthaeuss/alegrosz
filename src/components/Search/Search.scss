@@ -18,17 +18,15 @@
     outline: none;
 
     &::placeholder {
-
     }
 
     &__autocomplete {
-
     }
   }
 
   .autocomplete {
     position: absolute;
-    background: rgba(255, 255, 255, .9);
+    background: rgba(255, 255, 255, 0.9);
     padding: 1rem;
     width: calc(100% - 1rem);
     border: 1px solid rgb(206, 212, 218);
@@ -43,7 +41,7 @@
       line-height: 1.6;
       cursor: pointer;
 
-      &:hover{
+      &:hover {
         text-decoration: underline;
       }
     }

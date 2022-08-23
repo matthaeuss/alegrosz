@@ -61,7 +61,9 @@ function Products() {
             <main className="products">
               {products
                 .filter((product) => {
-                  return product.category === filters.category;
+                  return (
+                    !filters.category || product.category === filters.category
+                  );
                 })
                 .filter(searchFilter)
                 .map(({ id, images, name, description, price, currency }) => (
