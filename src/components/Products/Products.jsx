@@ -2,7 +2,7 @@ import { useEffect, useReducer, useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import { getDataFromApi } from "../../helpers/api";
+import { handleDataFromAPI } from "../../helpers/api";
 import { MEDIA_PATH } from "../../constants";
 
 import "./Products.scss";
@@ -36,7 +36,7 @@ function Products() {
   const [filters, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    getDataFromApi("v1/products").then((response) => setProducts(response));
+    handleDataFromAPI("v1/products").then((response) => setProducts(response));
   }, [search]);
 
   function searchFilter(item) {

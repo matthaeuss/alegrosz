@@ -22,7 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "api": "json-server --watch fake_api/db.json --port 3001 --routes fake_api/routes.json -d 750",
-    "dev": "concurrently \"npm run api\" \"npm start\""
+    "api:auth": "json-server-auth fake_api/db.json --port 3001 --routes fake_api/routes.json -d 750",
+    "dev": "concurrently \"npm start\" \"npm run api:auth\""
   },
   "eslintConfig": {
     "extends": [

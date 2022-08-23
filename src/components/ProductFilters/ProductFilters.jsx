@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { getDataFromApi } from "../../helpers/api";
+import { handleDataFromAPI } from "../../helpers/api";
 
 function ProductFilters({ dispatch }) {
   const [categories, setCategories] = useState([]);
   const [userCategory, setUserCategory] = useState(0);
 
   useEffect(() => {
-    getDataFromApi("v1/categories").then((response) => setCategories(response));
+    handleDataFromAPI("v1/categories").then((response) =>
+      setCategories(response)
+    );
   }, []);
 
   function handleCategory(event) {

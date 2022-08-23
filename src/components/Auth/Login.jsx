@@ -1,8 +1,11 @@
 import { Formik } from "formik";
 import { useFormik } from "formik";
 import "./Login.scss";
+import { handleDataFromAPI } from "../../helpers/api";
+import { useNavigate } from "react-router-dom";
 
 function Login(props) {
+  let navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -10,7 +13,10 @@ function Login(props) {
       remember: false,
     },
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      // alert(JSON.stringify(values, null, 2));
+      handleDataFromAPI("login", "post", values).then((data) => {
+        navigate("/", { replace: true });
+      });
     },
   });
 

@@ -1,6 +1,8 @@
 import { useFormik } from "formik";
+import { useNavigate } from "react-router-dom";
 
 import "./Register.scss";
+import { handleDataFromAPI } from "../../helpers/api";
 
 const validate = (values) => {
   const errors = {};
@@ -20,6 +22,7 @@ const validate = (values) => {
 };
 
 function Register() {
+  let navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -28,7 +31,11 @@ function Register() {
     },
     validate,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      // alert(JSON.stringify(values, null, 2));
+      delete values.repeatPassword;
+      handleDataFromAPI("users", "post", values).then((data) => {
+        navigate("/login", { replace: true });
+      });
     },
   });
 
