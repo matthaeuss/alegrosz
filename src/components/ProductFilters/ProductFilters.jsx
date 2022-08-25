@@ -6,7 +6,7 @@ function ProductFilters({ dispatch }) {
   const [userCategory, setUserCategory] = useState(0);
 
   useEffect(() => {
-    handleDataFromAPI("v1/categories").then((response) =>
+    handleDataFromAPI({ endpoint: "v1/categories" }).then((response) =>
       setCategories(response)
     );
   }, []);

@@ -216,6 +216,21 @@
       "email": "bobo@gmail.com",
       "password": "$2a$10$oO.u8InZS.NOv/f2H3GCbepD/tkVmKDkZdHiVLvjmeZoSBwXQGGRa",
       "id": 3
+    },
+    {
+      "email": "keke@gmail.com",
+      "password": "$2a$10$olwtV.cFvc8Qf/oSA0gQf..NrCUckcwZyuRyS.4QHIbJWtc2meAwK",
+      "id": 4
+    },
+    {
+      "email": "w@w.pl",
+      "password": "$2a$10$8ze2Rl/P6redr2v.kzTDfOT6nmxcS7u5Nje/MwSM.Y3G60DKy0wCG",
+      "id": 5
+    },
+    {
+      "email": "m@m.pl",
+      "password": "$2a$10$yKMGpXMg6jazCT01nCyOSOFdXs9Fn3FjWj25juLhMmlUiA7gONf5a",
+      "id": 6
     }
   ]
 }

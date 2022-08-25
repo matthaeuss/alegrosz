@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./NavBar.scss";
+import Logout from "../Logout/Logout";
 
 function NavBar(props) {
   return (
@@ -8,6 +9,7 @@ function NavBar(props) {
         Home
       </Link>
       <div>
+        <Logout />
         <Link to="/login" className="navigation__item">
           Login
         </Link>

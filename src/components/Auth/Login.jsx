@@ -1,10 +1,13 @@
 import { Formik } from "formik";
 import { useFormik } from "formik";
+import { useContext } from "react";
 import "./Login.scss";
 import { handleDataFromAPI } from "../../helpers/api";
 import { useNavigate } from "react-router-dom";
+import AuthContext from "../../Context/AuthProvider";
 
 function Login(props) {
+  const { setAuth } = useContext(AuthContext);
   let navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
@@ -14,8 +17,13 @@ function Login(props) {
     },
     onSubmit: (values) => {
       // alert(JSON.stringify(values, null, 2));
-      handleDataFromAPI("login", "post", values).then((data) => {
-        navigate("/", { replace: true });
+      handleDataFromAPI({
+        endpoint: "login",
+        method: "post",
+        body: values,
+      }).then((data) => {
+        setAuth(data);
+        navigate("/", { replace: false });
       });
     },
   });

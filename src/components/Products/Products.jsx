@@ -1,6 +1,6 @@
-import { useEffect, useReducer, useState } from "react";
+import { useContext, useEffect, useReducer, useState } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { handleDataFromAPI } from "../../helpers/api";
 import { MEDIA_PATH } from "../../constants";
@@ -9,6 +9,7 @@ import "./Products.scss";
 import Search from "../Search/Search";
 import Loader from "../Loader/Loader";
 import ProductFilters from "../ProductFilters/ProductFilters";
+import AuthContext from "../../Context/AuthProvider";
 
 const initialState = {
   category: undefined,
@@ -34,10 +35,20 @@ function Products() {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [filters, dispatch] = useReducer(reducer, initialState);
+  const { auth } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    handleDataFromAPI("v1/products").then((response) => setProducts(response));
-  }, [search]);
+    if (!Object.keys(auth).length) {
+      navigate("/login", { replace: false, state: { from: location } });
+    } else {
+      handleDataFromAPI({
+        endpoint: "v1/products",
+        credentials: auth.accessToken,
+      }).then((response) => setProducts(response));
+    }
+  }, [search, auth]);
 
   function searchFilter(item) {
     if (search === "") return true;

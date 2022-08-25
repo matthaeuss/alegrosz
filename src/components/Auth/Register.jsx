@@ -33,7 +33,11 @@ function Register() {
     onSubmit: (values) => {
       // alert(JSON.stringify(values, null, 2));
       delete values.repeatPassword;
-      handleDataFromAPI("users", "post", values).then((data) => {
+      handleDataFromAPI({
+        endpoint: "users",
+        method: "post",
+        body: values,
+      }).then((data) => {
         navigate("/login", { replace: true });
       });
     },
