@@ -231,6 +231,11 @@
       "email": "m@m.pl",
       "password": "$2a$10$yKMGpXMg6jazCT01nCyOSOFdXs9Fn3FjWj25juLhMmlUiA7gONf5a",
       "id": 6
+    },
+    {
+      "email": "p.p@wp.pl",
+      "password": "$2a$10$rP.qqPB8BAcRvRy4ZMXMJuXMjPEA6kQ1ImgI8AkW82qwg3..P.nTW",
+      "id": 7
     }
   ]
 }

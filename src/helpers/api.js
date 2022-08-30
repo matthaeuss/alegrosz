@@ -32,22 +32,33 @@ export async function handleDataFromAPI({
   return await response.json();
 }
 
-export async function getAllProductData(id) {
-  const data = await handleDataFromAPI(`v1/products/${id}`);
+export async function getAllProductData(id, credentials) {
+  const data = await handleDataFromAPI({
+    endpoint: `v1/products/${id}`,
+    credentials,
+  });
 
   const [comments, opinions, category, subcategory] = await Promise.all([
     handleDataFromAPI({
       endpoint: `v1/comments?${data.comments
         .map((comment) => "id=" + comment)
         .join("&")}`,
+      credentials,
     }),
     handleDataFromAPI({
       endpoint: `v1/opinions?${data.opinions
         .map((opinion) => "id=" + opinion)
         .join("&")}`,
+      credentials,
     }),
-    handleDataFromAPI({ endpoint: `v1/categories/${data.category}` }),
-    handleDataFromAPI({ endpoint: `v1/subcategories/${data.subcategory}` }),
+    handleDataFromAPI({
+      endpoint: `v1/categories/${data.category}`,
+      credentials,
+    }),
+    handleDataFromAPI({
+      endpoint: `v1/subcategories/${data.subcategory}`,
+      credentials,
+    }),
   ]);
 
   return {

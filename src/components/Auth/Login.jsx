@@ -1,14 +1,17 @@
-import { Formik } from "formik";
 import { useFormik } from "formik";
 import { useContext } from "react";
 import "./Login.scss";
 import { handleDataFromAPI } from "../../helpers/api";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import AuthContext from "../../Context/AuthProvider";
 
-function Login(props) {
+function Login() {
   const { setAuth } = useContext(AuthContext);
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -23,7 +26,7 @@ function Login(props) {
         body: values,
       }).then((data) => {
         setAuth(data);
-        navigate("/", { replace: false });
+        navigate(from, { replace: true });
       });
     },
   });

@@ -1,22 +1,32 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.scss";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Products from "./components/Products/Products";
 import Product from "./components/Product/Product";
 import Register from "./components/Auth/Register";
 import Login from "./components/Auth/Login";
-import NavBar from "./components/NavBar/NavBar";
+import RequireAuth from "./components/Auth/RequireAuth";
+import Layout from "./components/Layout/Layout";
+import NotFound from "./components/HttpCodes/NotFound";
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavBar />
+    <>
       <Routes>
-        <Route path="/" element={<Products />} />
-        <Route path="/products/:id" element={<Product />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<RequireAuth />}>
+            <Route path="/" element={<Products />} />
+            <Route path="/products/:id" element={<Product />} />
+          </Route>
+        </Route>
+
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
+        <Route path="/" element={<Layout />}>
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 

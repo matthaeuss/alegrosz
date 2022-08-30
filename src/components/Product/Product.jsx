@@ -1,18 +1,21 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 import { MEDIA_PATH } from "../../constants";
-import "./Product.scss";
 import { getAllProductData } from "../../helpers/api";
+import "./Product.scss";
+
 import Loader from "../Loader/Loader";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import AuthContext from "../../Context/AuthProvider";
 
 function Product() {
+  const { auth } = useContext(AuthContext);
   const { id } = useParams();
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    getAllProductData(id).then((data) => setProduct(data));
+    getAllProductData(id, auth.accessToken).then((data) => setProduct(data));
   }, []);
 
   return (
