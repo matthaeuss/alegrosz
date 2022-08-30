@@ -237,5 +237,6 @@
       "password": "$2a$10$rP.qqPB8BAcRvRy4ZMXMJuXMjPEA6kQ1ImgI8AkW82qwg3..P.nTW",
       "id": 7
     }
-  ]
+  ],
+  "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InAucEB3cC5wbCIsImlhdCI6MTY2MTg3NTgzNywiZXhwIjoxNjYxODc5NDM3LCJzdWIiOiI3In0.L2UUHSwZ1y1H4yUHdtSVR1XTzxFlzKjc85CQaRMJ_2E\"\nuser: {email: \"p.p@wp.pl\", id: 7}"
 }

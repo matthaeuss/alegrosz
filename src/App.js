@@ -17,14 +17,11 @@ function App() {
             <Route path="/" element={<Products />} />
             <Route path="/products/:id" element={<Product />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Route>
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-
-        <Route path="/" element={<Layout />}>
-          <Route path="*" element={<NotFound />} />
-        </Route>
       </Routes>
     </>
   );
