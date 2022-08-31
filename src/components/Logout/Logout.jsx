@@ -1,15 +1,10 @@
-import { useContext } from "react";
-import AuthContext from "../../Context/AuthProvider";
+import useLogout from "../../hooks/useLogout";
 
 function Logout(props) {
-  const { setAuth } = useContext(AuthContext);
-
-  function handleLogout() {
-    setAuth({});
-  }
+  const logout = useLogout();
 
   return (
-    <button onClick={handleLogout} className="navigation__item">
+    <button onClick={logout} className="navigation__item">
       Logout
     </button>
   );

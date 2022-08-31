@@ -50,5 +50,5 @@
     "json-server-auth": "^2.1.0",
     "sass": "^1.54.3"
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3000"
 }

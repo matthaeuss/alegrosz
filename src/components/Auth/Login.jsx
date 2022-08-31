@@ -1,9 +1,11 @@
 import { useFormik } from "formik";
 import { useContext } from "react";
 import "./Login.scss";
-import { handleDataFromAPI } from "../../helpers/api";
 import { useNavigate, useLocation } from "react-router-dom";
 import AuthContext from "../../Context/AuthProvider";
+import axios from "../../api/axios";
+
+const LOGIN_URL = "/login";
 
 function Login() {
   const { setAuth } = useContext(AuthContext);
@@ -18,16 +20,25 @@ function Login() {
       password: "",
       remember: false,
     },
-    onSubmit: (values) => {
-      // alert(JSON.stringify(values, null, 2));
-      handleDataFromAPI({
-        endpoint: "login",
-        method: "post",
-        body: values,
-      }).then((data) => {
-        setAuth(data);
+    onSubmit: async (values) => {
+      try {
+        const response = await axios.post(LOGIN_URL, JSON.stringify(values));
+
+        const accessToken = response?.data?.accessToken;
+
+        setAuth({ accessToken });
         navigate(from, { replace: true });
-      });
+      } catch (error) {
+        if (!error?.response) {
+          console.log("No server response");
+        } else if (error.response?.status === 400) {
+          console.log("Missing user name or password");
+        } else if (error.response?.status === 401) {
+          console.log("Unauthorized");
+        } else {
+          console.log("Login failed");
+        }
+      }
     },
   });
 

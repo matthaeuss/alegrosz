@@ -47,6 +47,7 @@ function Products() {
         endpoint: "v1/products",
         credentials: auth.accessToken,
       }).then((response) => setProducts(response));
+      //axios private
     }
   }, [search, auth]);
 
