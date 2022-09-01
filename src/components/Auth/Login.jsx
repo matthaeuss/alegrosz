@@ -49,6 +49,7 @@ function Login() {
           Email Address:
         </label>
         <input
+          data-cy="email"
           className="login__input"
           id="email"
           name="email"
@@ -62,6 +63,7 @@ function Login() {
           Password:
         </label>
         <input
+          data-cy="password"
           className="login__input"
           id="password"
           name="password"
@@ -72,6 +74,7 @@ function Login() {
       </div>
       <div className="login__box login__box--inline">
         <input
+          data-cy="remember"
           className="login__input"
           id="remember"
           name="remember"
@@ -84,7 +87,9 @@ function Login() {
         </label>
       </div>
 
-      <button type="submit">Login</button>
+      <button data-cy="submit" type="submit">
+        Login
+      </button>
     </form>
   );
 }

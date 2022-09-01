@@ -50,6 +50,7 @@ function Register() {
           Email:
         </label>
         <input
+          data-cy="email"
           className="box__input"
           id="email"
           name="email"
@@ -66,6 +67,7 @@ function Register() {
           Password:
         </label>
         <input
+          data-cy="password"
           className="box__input"
           id="password"
           name="password"
@@ -82,6 +84,7 @@ function Register() {
           Repeat Password:
         </label>
         <input
+          data-cy="repeatPassword"
           className="box__input"
           id="repeatPassword"
           name="repeatPassword"
@@ -94,7 +97,9 @@ function Register() {
         ) : null}
       </div>
 
-      <button type="submit">Register</button>
+      <button data-cy="submit" type="submit">
+        Register
+      </button>
     </form>
   );
 }

@@ -79,7 +79,12 @@ function Products() {
                 })
                 .filter(searchFilter)
                 .map(({ id, images, name, description, price, currency }) => (
-                  <div key={id} className="products__card card">
+                  // TODO CREATE A NEW COMPONENT
+                  <div
+                    data-cy="product"
+                    key={id}
+                    className="products__card card"
+                  >
                     <div className="card__mask">
                       <img
                         src={`${MEDIA_PATH}/${images[0]}`}

@@ -1,4 +1,10 @@
 {
+  "refresh": {
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InAucEB3cC5wbCIsImlhdCI6MTY2MTg3NTgzNywiZXhwIjoxNjYxODc5NDM3LCJzdWIiOiI3In0.L2UUHSwZ1y1H4yUHdtSVR1XTzxFlzKjc85CQaRMJ_2E\"\nuser: {email: \"p.p@wp.pl\", id: 7}"
+  },
+  "logout": {
+    "value": true
+  },
   "products": [
     {
       "id": 1,
@@ -202,42 +208,9 @@
   ],
   "users": [
     {
-      "email": "koko@wp.pl",
-      "password": "$2a$10$cZzYzXAPvYWCAKtuLC0gHOlB5MGuuRR.qgoZjiScvVDnk6U2xnyAu",
-      "repeatPassword": "Mateusz123",
+      "email": "lel@lel.com",
+      "password": "$2a$10$HgfU/r7d6buqTzI3bHoqmuNbfurMkbwq7sqb62YS.lHsU/gFcBXce",
       "id": 1
-    },
-    {
-      "email": "koko@gmail.com",
-      "password": "$2a$10$kfb0c5Goow6LzT.bt2rOou5BNWR1UtS11.qGWH8yAiobRsNC/a9NW",
-      "id": 2
-    },
-    {
-      "email": "bobo@gmail.com",
-      "password": "$2a$10$oO.u8InZS.NOv/f2H3GCbepD/tkVmKDkZdHiVLvjmeZoSBwXQGGRa",
-      "id": 3
-    },
-    {
-      "email": "keke@gmail.com",
-      "password": "$2a$10$olwtV.cFvc8Qf/oSA0gQf..NrCUckcwZyuRyS.4QHIbJWtc2meAwK",
-      "id": 4
-    },
-    {
-      "email": "w@w.pl",
-      "password": "$2a$10$8ze2Rl/P6redr2v.kzTDfOT6nmxcS7u5Nje/MwSM.Y3G60DKy0wCG",
-      "id": 5
-    },
-    {
-      "email": "m@m.pl",
-      "password": "$2a$10$yKMGpXMg6jazCT01nCyOSOFdXs9Fn3FjWj25juLhMmlUiA7gONf5a",
-      "id": 6
-    },
-    {
-      "email": "p.p@wp.pl",
-      "password": "$2a$10$rP.qqPB8BAcRvRy4ZMXMJuXMjPEA6kQ1ImgI8AkW82qwg3..P.nTW",
-      "id": 7
     }
-  ],
-  "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InAucEB3cC5wbCIsImlhdCI6MTY2MTg3NTgzNywiZXhwIjoxNjYxODc5NDM3LCJzdWIiOiI3In0.L2UUHSwZ1y1H4yUHdtSVR1XTzxFlzKjc85CQaRMJ_2E\"\nuser: {email: \"p.p@wp.pl\", id: 7}",
-  "logout": true
+  ]
 }
