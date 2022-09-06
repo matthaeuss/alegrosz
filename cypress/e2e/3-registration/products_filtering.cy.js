@@ -20,9 +20,9 @@ describe("Products filtering", () => {
   it("Should filter products by hardware category", () => {
     cy.get("[data-cy='categoryFilter']").select("1");
 
-    cy.get("[data-cy='product']").its("length").should("be.eq", 2); // !!!!!
+    cy.get("[data-cy='product']").its("length").should("be.eq", 2);
 
-    cy.get("[data-cy='detailsLink']").first().click(); // !!!!!
+    cy.get("[data-cy='detailsLink']").first().click();
 
     cy.get("[data-cy='productCategory']").contains("Hardware");
   });
