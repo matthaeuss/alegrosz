@@ -100,7 +100,11 @@ function Products() {
                           {currency}
                           {price}
                         </span>
-                        <Link to={`/products/${id}`} className="card__link">
+                        <Link
+                          data-cy="detailsLink"
+                          to={`/products/${id}`}
+                          className="card__link"
+                        >
                           Details
                         </Link>
                       </div>

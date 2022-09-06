@@ -208,9 +208,29 @@
   ],
   "users": [
     {
-      "email": "lel@lel.com",
-      "password": "$2a$10$HgfU/r7d6buqTzI3bHoqmuNbfurMkbwq7sqb62YS.lHsU/gFcBXce",
-      "id": 1
+      "email": "j@wp.pl",
+      "password": "$2a$10$GATwdewtc3YMy1iOx/kA2ubGAERUtdy4ergEU2DRCq1RbdTe4i7Ye",
+      "id": 2
+    },
+    {
+      "email": "testuser@test.com",
+      "password": "$2a$10$6LOGLBL7a.Xnv5L721U4deB/7KLaGUcRl9fMhf3PoCPbNL62/TiAS",
+      "id": 3
+    },
+    {
+      "email": "w@w.pl",
+      "password": "$2a$10$PB0RC6cwrq0Jc99RNiYem.BSUGLWRI7U5n8TqY2m7lyC/F0oYrt4q",
+      "id": 4
+    },
+    {
+      "email": "mateusz@gmail.pl",
+      "password": "$2a$10$TaqkEtuCVdTJI7AjtGFZ9u//2fRIJymJbaMDx0xOPKcBunsYdb7ky",
+      "id": 5
+    },
+    {
+      "email": "cos@wp.pl",
+      "password": "$2a$10$mbn5dNmxy89s.fJW/0FHcO7HN0k76df7I/sByfsGjLDSSBNeJZeJi",
+      "id": 6
     }
   ]
 }

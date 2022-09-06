@@ -20,6 +20,7 @@ function ProductFilters({ dispatch }) {
     <aside>
       <label htmlFor="category">Category</label>
       <select
+        data-cy="categoryFilter"
         name="category"
         id="category"
         value={userCategory}

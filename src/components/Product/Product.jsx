@@ -62,29 +62,34 @@ function Product() {
               </section>
 
               <section>
-                <div>
-                  <h2>{product.name}</h2>
-                  <p>Opis: {product.description}</p>
-                  <p>Kategoria: {product.category}</p>
-                  <p>Podkategoria: {product.subcategory}</p>
-                  <p>Na stanie: {product.stock}</p>
+                <div className="product__details">
+                  <h1>{product.name}</h1>
+                  <li>Description: {product.description}</li>
+                  <li data-cy="productCategory">
+                    Category: {product.category}
+                  </li>
+                  <li>Sub-Category: {product.subcategory}</li>
+                  <li>Available: {product.stock}</li>
                   <div className="card__footer">
-                    <span className="card__price">
-                      {product.price} {product.currency}
-                    </span>
+                    <p>
+                      <span className="card__price">
+                        {product.price} {product.currency}
+                      </span>
+                    </p>
                   </div>
                 </div>
               </section>
               <section className="container container--opinion">
-                <h3 className="opinion__hdl">Zobacz opinie: </h3>
+                <h3 className="opinion__hdl">Opinions: </h3>
                 {product.opinions &&
                   product.opinions.map(({ id, stars, content, author }) => (
                     <div key={id} className="opinion">
                       <h3 className="opinion__author">{`${author}:`}</h3>
                       <p className="opinion__content">{`"${content}"`}</p>
+                      {/*<p className="opinion__content">{`"${stars}"`}</p>*/}
                     </div>
                   ))}
-                <button className="opinion_btn">Add opinion</button>
+                <button className="opinion__btn">Add opinion</button>
               </section>
             </main>
           </div>

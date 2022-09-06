@@ -93,7 +93,9 @@ function Register() {
           value={formik.values.repeatPassword}
         />
         {formik.errors.password ? (
-          <div className="required">{formik.errors.repeatPassword}</div>
+          <div data-cy="validationRepeatPassword" className="required">
+            {formik.errors.repeatPassword}
+          </div>
         ) : null}
       </div>
 
