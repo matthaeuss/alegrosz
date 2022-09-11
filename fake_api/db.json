@@ -1,6 +1,6 @@
 {
   "refresh": {
-    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InAucEB3cC5wbCIsImlhdCI6MTY2MTg3NTgzNywiZXhwIjoxNjYxODc5NDM3LCJzdWIiOiI3In0.L2UUHSwZ1y1H4yUHdtSVR1XTzxFlzKjc85CQaRMJ_2E\"\nuser: {email: \"p.p@wp.pl\", id: 7}"
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQHRlc3QuY29tIiwiaWF0IjoxNjYyODk1ODE1LCJleHAiOjE2NjI4OTk0MTUsInN1YiI6IjEifQ.VL9sF851t5fJvoCTfyRZomHdtn7szIencGoyomJ6or8"
   },
   "logout": {
     "value": true
@@ -208,34 +208,14 @@
   ],
   "users": [
     {
-      "email": "j@wp.pl",
-      "password": "$2a$10$GATwdewtc3YMy1iOx/kA2ubGAERUtdy4ergEU2DRCq1RbdTe4i7Ye",
-      "id": 2
-    },
-    {
       "email": "testuser@test.com",
-      "password": "$2a$10$6LOGLBL7a.Xnv5L721U4deB/7KLaGUcRl9fMhf3PoCPbNL62/TiAS",
-      "id": 3
-    },
-    {
-      "email": "w@w.pl",
-      "password": "$2a$10$PB0RC6cwrq0Jc99RNiYem.BSUGLWRI7U5n8TqY2m7lyC/F0oYrt4q",
-      "id": 4
+      "password": "$2a$10$mFtPfoBZDWwy0O0FHclx/OegBz2CWil00Sa84b31kXMzfNpkFssvG",
+      "id": 1
     },
     {
       "email": "mateusz@gmail.pl",
-      "password": "$2a$10$TaqkEtuCVdTJI7AjtGFZ9u//2fRIJymJbaMDx0xOPKcBunsYdb7ky",
-      "id": 5
-    },
-    {
-      "email": "cos@wp.pl",
-      "password": "$2a$10$mbn5dNmxy89s.fJW/0FHcO7HN0k76df7I/sByfsGjLDSSBNeJZeJi",
-      "id": 6
-    },
-    {
-      "email": "kami@gmail.com",
-      "password": "$2a$10$xK/KgGy2oFgQ5RakfOtD/ObQq1xElJ0Cwn.NoWKMPyYkB1/W7fdly",
-      "id": 7
+      "password": "$2a$10$q.jzNXzUIZg0VjGfdWEAAuGaJpryVbt24hI/nrAwNVjoJvsRNRNRe",
+      "id": 2
     }
   ]
 }

@@ -1,31 +1,19 @@
 /// <reference types="cypress" />
 
-describe("Describe products visibility", () => {
-  it("Should see products", async () => {
-    const url = "http://localhost";
-    const portRouter = "3000";
-    const portApi = "3001";
-    const email = "testuser@test.com";
-    const password = "Testpassword123";
+describe("Describe products visibility", function () {
+  beforeEach(async function () {
+    this.allFixtures = await cy.fixture("allFixtures");
+  });
 
-    await fetch(`${url}:${portApi}/users/1`, {
-      method: "DELETE",
-    }).catch(() => {});
+  it("Should see products", function () {
+    cy.task("removeUser", { id: "1" });
 
-    cy.visit(`${url}:${portRouter}/register`);
+    cy.visit("/register");
+    cy.register(this.allFixtures.user);
+    cy.task("refreshToken", this.allFixtures.user);
 
-    cy.get("[data-cy='email']").type(email);
-    cy.get("[data-cy='password']").type(password);
-    cy.get("[data-cy='repeatPassword']").type(password);
-
-    cy.get("[data-cy='submit']").click();
-
-    cy.url().should("include", `${url}:${portRouter}/login`);
-
-    cy.get("[data-cy='email']").type(email);
-    cy.get("[data-cy='password']").type(password);
-
-    cy.get("[data-cy='submit']").click();
+    cy.url().should("include", "/login");
+    cy.login(this.allFixtures.user);
 
     cy.get("[data-cy='product']").its("length").should("be.eq", 6);
   });

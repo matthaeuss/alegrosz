@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { MEDIA_PATH } from "../../constants";
 import { getAllProductData } from "../../helpers/api";
 import "./Product.scss";
@@ -14,8 +14,14 @@ function Product() {
   const { id } = useParams();
   const [product, setProduct] = useState({});
 
+  const navigate = useNavigate();
+
   useEffect(() => {
-    getAllProductData(id, auth.accessToken).then((data) => setProduct(data));
+    getAllProductData(id, auth.accessToken)
+      .then((data) => {
+        setProduct(data);
+      })
+      .catch(() => navigate("/unauthorized"));
   }, []);
 
   return (

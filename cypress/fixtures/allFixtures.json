@@ -1,7 +1,8 @@
 {
   "configuration": {
     "url": "http://localhost",
-    "portRouter": "3000"
+    "portRouter": "3000",
+    "portApi": 3001
   },
   "productDetails": {
     "id": 1,
@@ -50,6 +51,6 @@
     "email": "testuser@test.com",
     "body": "Fixtures are a great way to mock data for responses to routes",
     "password": "Testpassword123",
-    "repeatPassword": "Testpassword1234"
+    "repeatPassword": "Testpassword123"
   }
 }

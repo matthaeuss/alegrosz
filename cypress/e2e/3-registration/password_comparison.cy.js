@@ -10,7 +10,6 @@ describe("Products filtering", () => {
     cy.visit(`${url}:${portRouter}/register`);
 
     cy.get("[data-cy='email']").type(this.user.email);
-
     cy.get("[data-cy='password']").type(this.user.password);
   });
 

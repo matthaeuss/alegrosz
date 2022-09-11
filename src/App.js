@@ -7,6 +7,7 @@ import Login from "./components/Auth/Login";
 import RequireAuth from "./components/Auth/RequireAuth";
 import Layout from "./components/Layout/Layout";
 import NotFound from "./components/HttpCodes/NotFound";
+import Unauthorized from "./components/HttpCodes/Unauthorized";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/products/:id" element={<Product />} />
           </Route>
           <Route path="*" element={<NotFound />} />
+          <Route path="/unauthorized" element={<Unauthorized />} />
         </Route>
 
         <Route path="/login" element={<Login />} />

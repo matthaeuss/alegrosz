@@ -46,7 +46,9 @@ function Products() {
       handleDataFromAPI({
         endpoint: "v1/products",
         credentials: auth.accessToken,
-      }).then((response) => setProducts(response));
+      })
+        .then((response) => setProducts(response))
+        .catch(() => navigate("/unauthorized"));
       //axios private
     }
   }, [search, auth]);
