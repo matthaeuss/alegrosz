@@ -231,6 +231,11 @@
       "email": "cos@wp.pl",
       "password": "$2a$10$mbn5dNmxy89s.fJW/0FHcO7HN0k76df7I/sByfsGjLDSSBNeJZeJi",
       "id": 6
+    },
+    {
+      "email": "kami@gmail.com",
+      "password": "$2a$10$xK/KgGy2oFgQ5RakfOtD/ObQq1xElJ0Cwn.NoWKMPyYkB1/W7fdly",
+      "id": 7
     }
   ]
 }

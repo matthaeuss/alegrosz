@@ -18,6 +18,10 @@ const validate = (values) => {
     errors.password = "Must be 8 characters or more";
   }
 
+  if (values.password !== values.repeatPassword) {
+    errors.password = "Passwords are not the same!";
+    errors.repeatPassword = "Passwords are not the same!";
+  }
   return errors;
 };
 

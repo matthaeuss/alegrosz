@@ -1,0 +1,55 @@
+{
+  "configuration": {
+    "url": "http://localhost",
+    "portRouter": "3000"
+  },
+  "productDetails": {
+    "id": 1,
+    "name": "AMD Ryzen 9700",
+    "description": "PC",
+    "category": "Hardware",
+    "subcategory": "Processors",
+    "price": 2800,
+    "currency": "PLN",
+    "stock": 5,
+    "images": ["ryzen.jpeg", "ryzen2.jpeg", "ryzen3.jpeg", "ryzen4.jpeg"],
+    "opinions": [
+      {
+        "id": 1,
+        "stars": 5,
+        "content": "amazing",
+        "author": "Olivier"
+      },
+      {
+        "id": 3,
+        "stars": 2,
+        "content": "not enough",
+        "author": "Pawel"
+      }
+    ],
+    "comments": [
+      {
+        "id": 1,
+        "author": "Andrzej",
+        "content": "Good product"
+      },
+      {
+        "id": 2,
+        "author": "Grzesiek",
+        "content": "Bad choice"
+      },
+      {
+        "id": 3,
+        "author": "Olivier",
+        "content": "I would like Mac OS"
+      }
+    ]
+  },
+  "user": {
+    "name": "Using fixtures to represent data",
+    "email": "testuser@test.com",
+    "body": "Fixtures are a great way to mock data for responses to routes",
+    "password": "Testpassword123",
+    "repeatPassword": "Testpassword1234"
+  }
+}

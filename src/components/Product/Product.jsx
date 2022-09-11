@@ -26,7 +26,7 @@ function Product() {
           <div className="product">
             <main className="container">
               <section className="slider">
-                <div className="slider__slides">
+                <div className="slider__slides" data-cy="product-details-image">
                   {product.images &&
                     product.images.map((img, idx) => (
                       <input
