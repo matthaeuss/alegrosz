@@ -15,6 +15,6 @@ describe("Describe products visibility", function () {
     cy.url().should("include", "/login");
     cy.login(this.allFixtures.user);
 
-    cy.get("[data-cy='product']").its("length").should("be.eq", 6);
+    cy.get("[data-cy='product']").its("length").should("be.eq", 12);
   });
 });

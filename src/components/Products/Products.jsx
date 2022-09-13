@@ -72,7 +72,7 @@ function Products() {
         ) : (
           <section className="wrapper">
             <ProductFilters dispatch={dispatch} />
-            <main className="products">
+            <main className="products" data-cy="all_products">
               {products
                 .filter((product) => {
                   return (
@@ -87,7 +87,7 @@ function Products() {
                     key={id}
                     className="products__card card"
                   >
-                    <div className="card__mask">
+                    <div className="card__mask" data-cy="products-card-image">
                       <img
                         src={`${MEDIA_PATH}/${images[0]}`}
                         alt={name}

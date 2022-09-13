@@ -1,6 +1,6 @@
 {
   "refresh": {
-    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQHRlc3QuY29tIiwiaWF0IjoxNjYyODk1ODE1LCJleHAiOjE2NjI4OTk0MTUsInN1YiI6IjEifQ.VL9sF851t5fJvoCTfyRZomHdtn7szIencGoyomJ6or8"
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQHRlc3QuY29tIiwiaWF0IjoxNjYyOTkwOTkzLCJleHAiOjE2NjI5OTQ1OTMsInN1YiI6IjEifQ.dCIa2NK2I8nheoVVAagqU4tOqYsrSGGRBrZ1ABqFoGI"
   },
   "logout": {
     "value": true
@@ -126,6 +126,138 @@
       "stock": 5,
       "images": [
         "ryzen.jpeg"
+      ],
+      "opinions": [
+        1,
+        3
+      ],
+      "comments": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Intel core i3",
+      "description": "PC",
+      "category": 2,
+      "subcategory": 2,
+      "price": 2800,
+      "currency": "PLN",
+      "stock": 5,
+      "images": [
+        "intel_i3.jpg"
+      ],
+      "opinions": [
+        1,
+        3
+      ],
+      "comments": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Intel core i5",
+      "description": "PC",
+      "category": 2,
+      "subcategory": 2,
+      "price": 2800,
+      "currency": "PLN",
+      "stock": 5,
+      "images": [
+        "intel_i5.jpg"
+      ],
+      "opinions": [
+        1,
+        3
+      ],
+      "comments": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Intel core i7",
+      "description": "PC",
+      "category": 2,
+      "subcategory": 2,
+      "price": 2800,
+      "currency": "PLN",
+      "stock": 5,
+      "images": [
+        "intel_i7.jpg"
+      ],
+      "opinions": [
+        1,
+        3
+      ],
+      "comments": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Intel core i9",
+      "description": "PC",
+      "category": 2,
+      "subcategory": 2,
+      "price": 2800,
+      "currency": "PLN",
+      "stock": 5,
+      "images": [
+        "intel_i9.jpg"
+      ],
+      "opinions": [
+        1,
+        3
+      ],
+      "comments": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Intel core i11",
+      "description": "PC",
+      "category": 2,
+      "subcategory": 2,
+      "price": 2800,
+      "currency": "PLN",
+      "stock": 5,
+      "images": [
+        "intel_i11.jpg"
+      ],
+      "opinions": [
+        1,
+        3
+      ],
+      "comments": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Sony WH-1000XM4",
+      "description": "PC",
+      "category": 3,
+      "subcategory": 2,
+      "price": 2800,
+      "currency": "PLN",
+      "stock": 5,
+      "images": [
+        "sony.jpg"
       ],
       "opinions": [
         1,

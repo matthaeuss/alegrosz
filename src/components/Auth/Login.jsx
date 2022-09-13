@@ -87,7 +87,7 @@ function Login() {
         </label>
       </div>
 
-      <button data-cy="submit" type="submit">
+      <button data-cy="submit" type="submit" id="btnLogin">
         Login
       </button>
     </form>

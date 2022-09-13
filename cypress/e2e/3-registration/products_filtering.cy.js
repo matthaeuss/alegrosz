@@ -30,10 +30,20 @@ describe("Products filtering", () => {
   it("Should filter products by software category", () => {
     cy.get("[data-cy='categoryFilter']").select("2");
 
-    cy.get("[data-cy='product']").its("length").should("be.eq", 4);
+    cy.get("[data-cy='product']").its("length").should("be.eq", 9);
 
     cy.get("[data-cy='detailsLink']").first().click();
 
     cy.get("[data-cy='productCategory']").contains("Software");
+  });
+
+  it("Should filter products by accessories category", () => {
+    cy.get("[data-cy='categoryFilter']").select("3");
+
+    cy.get("[data-cy='product']").its("length").should("be.eq", 1);
+
+    cy.get("[data-cy='detailsLink']").click();
+
+    cy.get("[data-cy='productCategory']").contains("Accessories");
   });
 });

@@ -20,7 +20,7 @@ describe("Products filtering", () => {
     );
   });
 
-  it("Should has the same passwords", function () {
+  it("Should have the same passwords", function () {
     cy.get("[data-cy='repeatPassword']").type(this.user.password);
     cy.get("[data-cy='validationRepeatPassword']").contains(
       "Passwords are not the same!"

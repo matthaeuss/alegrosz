@@ -9,7 +9,7 @@ function NavBar(props) {
 
   return (
     <nav className="navigation">
-      <Link to="/" className="navigation__item">
+      <Link to="/" className="navigation__item" data-cy="navbar_home">
         Home
       </Link>
       <div>
@@ -18,7 +18,11 @@ function NavBar(props) {
             <Link to="/login" className="navigation__item">
               Login
             </Link>
-            <Link to="/register" className="navigation__item">
+            <Link
+              to="/register"
+              className="navigation__item"
+              data-cy="navbar_register"
+            >
               Register
             </Link>
           </>
